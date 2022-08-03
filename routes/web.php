@@ -17,14 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 })->name('root');
 
-Route::get('/hi', function () {
-    return "Hello Word";
-})->name('greeting');
+Route::get('/index', function () {
+    return view('home.index',[]);
+})->name('home.index');
 
-Route::get('/post/{id?}', function ($id = 1) {
-    return "Posting Blog" .$id;
-})->name("posts");
-
-Route::get('/days/{id}', function ($id) {
-    return "Days" .$id;
-})->name("days");
+Route::get('/contact', function () {
+    return view('home.contact',[]);
+})->name('home.contact');
